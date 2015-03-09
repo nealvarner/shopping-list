@@ -1,21 +1,19 @@
 jQuery(document).ready(function($) {
-  console.log("STARTED");
-  $('.delete-button').on('click', function(event){
-  // fires when any LIs are clicked on
-  // including LIs that aren't on the page when it is initially loaded
-    console.log($(this).parent('li'));
-    $(this).parent('li').remove();
-  });
 
-  $('.add-button').on('click', function(event){
-    console.log("clicked add-button");
-    console.log($('.item-to-add').val());
-    $('.shop-list').append('<li class="item"><input type="checkbox" id="ch_box" value="'+$('.item-to-add').val()+'"><label>'+$('.item-to-add').val()+'</label><button class="delete-button">Remove</button></li>');
-    $('.item-to-add').val('');
-  });
+  for (var i = 0; i <=100; i++){
+    var output = ''
+    if (i % 3 == 0) {
+      output += "fizz"
+    }
+    if (i % 5 == 0) {
+      output += "buzz"
+    }
+    if (output == '') {
+      output = String(i)
+    }
+
+    $('ul').append('<li>'+output+'</li>')
+
+  }
+
 });
-
-
-function add(item_name) {
-  $('#shop-list').append('<li class="item"> <input type="checkbox" name="item" value="'+item_name+'"><label>'+item_name+'</label><button class="delete-button">Remove</button></li>');
-}
