@@ -124,7 +124,6 @@ body, a {
 }
 
 .introduction {
-    background-image: url("../images/first-background.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -172,4 +171,10 @@ body, a {
     text-align: center;
     margin-top: 1em;
 }
+
+input[type="checkbox"]:checked + label {
+  text-decoration:line-through;
+}
+
+
 
